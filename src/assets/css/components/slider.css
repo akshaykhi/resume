@@ -1,0 +1,32 @@
+/*-----------------------------------*\
+  #slider.css
+\*-----------------------------------*/
+
+/**
+ * 
+ */
+
+
+
+
+
+.slider {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  overflow-x: auto;
+  scroll-snap-type: inline mandatory;
+  color: rgb(248, 168, 76);
+  text-align: center; 
+}
+
+.slider-item h3 {
+  margin: 10px 0; /* Add margin to create space around the h3 element */
+  font-size: 24px; /* Adjust the font size as needed */
+  font-weight: bold; /* Make the text bold */
+  color: #FFA500; /* Set the text color to orange (you can use any color you like) */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add a subtle text shadow */
+  padding: 10px; /* Add some padding to the text for spacing */
+}
+
+.slider-item { scroll-snap-align: start; }

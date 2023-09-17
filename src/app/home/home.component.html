@@ -1,0 +1,43 @@
+ 
+<main>  
+   
+    <article> 
+ 
+      <!--   
+        - #HERO   
+      --> 
+      <section  id='home' class="section hero" aria-label="home">
+        <div  class="container">
+           
+
+
+          <div  class="hero-content"> 
+
+            <p class="hero-subtitle"> My name is Akshay</p>
+
+            <h1  class="headline-lg">I'm a Developer</h1>
+ 
+            <p class="hero-text body-md">     
+              Based in Pune, Maharashtra.   
+            </p>  
+            <p>I'm an experienced Senior Software Developer with expertise in E-commerce, ETL, and telecom domains.
+               My skills include Java, Spring Boot, microservices, and cutting-edge front end tech like Angular. 
+               I have a strong background in Java development, API creation, and support activities. I excel in ETL, OMS, and CRM systems.</p>
+               <br>
+               <!-- (click)="scrollToSection('api')"  -->
+               <nav>
+            <a routerLink="/api/" href="#" (click)="scrollToSection('api')" class="btn btn-primary" routerLinkActive="active">   
+              Chaliye shuru karte h </a>
+            </nav>
+          </div> 
+          <figure class="hero-banner">
+            <img src="assets/images/hero-banner.png" width="680" height="645"
+              alt="Jassa, the blonde, dressed in a green hoodie with a smile on her face" class="w-100">
+          </figure>
+
+        </div>
+
+      </section>
+    </article>
+  </main>
+  <router-outlet></router-outlet> 

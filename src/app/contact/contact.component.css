@@ -1,0 +1,12 @@
+/* CSS to highlight error messages */
+.error-message {
+    color: red;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  /* CSS to highlight the input field when it has errors */
+  .input-error {
+    border: 1px solid red;
+  }
+  

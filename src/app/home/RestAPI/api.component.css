@@ -1,0 +1,44 @@
+
+h4 {
+    font-size: 24px; /* Adjust the font size as needed */
+    color: #f307df; /* Change the text color */
+    font-weight: bold; /* Make the text bold */
+    margin-bottom: 20px; /* Add some space below the heading */
+    text-align: center; /* Center-align the text */
+    background-color: #f2f2f2; /* Add a light background color */
+    padding: 10px; /* Add padding for better readability */
+  }
+  
+/* styles.css */
+
+/* Style the table header */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px 0;
+  }
+  
+  table, th, td {
+    border: 1px solid #ccc;
+  }
+  
+  th, td {
+    padding: 12px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  
+  /* Style table rows */
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  /* Style table hover effect */
+  tr:hover {
+    background-color: #ddd;
+  }
+  

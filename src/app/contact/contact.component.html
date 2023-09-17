@@ -1,0 +1,136 @@
+<main>
+    <article>
+
+      <!--   
+        - #CONTACT  
+      -->
+      <section class="section contact has-bg-image" aria-labelledby="contact-label"
+        style="background-image: url('./assets/images/contact-bg.png')">
+        <div   class="container">
+
+          <form  id="contact" action="" class="contact-form" [formGroup]="formDetails" (ngSubmit)="submit()">
+
+            <h2 class="headline-sm" id="contact-label">Get in touch</h2>
+
+            <p class="contact-text body-md">
+              Our friendly team would love to hear from you....
+            </p>
+
+            <div class="wrapper">
+              <div>
+                <label for="name" class="label">First name</label>
+              
+                <input                
+                formControlName="name"
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Name *"
+                  minlength="3"
+                  maxlength="20"
+                  required
+                  class="input-field"
+                >
+                <div *ngIf="f.name?.touched && f.name?.invalid">
+                  <div *ngIf="f.name.errors?.['required']" class="error-message">Name is required.</div>
+                  <div *ngIf="f.name.errors?.['minlength']" class="error-message">Name should be 3 character.</div>
+              </div>
+                </div>
+
+              <div>
+                <label for="email" class="label">Your Email </label>
+
+                <input formControlName="email" 
+                type="email" name="email" id="email" 
+                placeholder="Email *" required class="input-field">
+                <div *ngIf="f.email?.touched && f.email?.invalid" >
+                  <div *ngIf="f.email.errors?.['required']" class="error-message">Email is required.</div>
+                  <div *ngIf="f.email.errors?.['email']" class="error-message">Please, enter valid email address.</div>
+              </div>
+              </div>
+
+            </div>
+
+            <label for="subject" class="label">Subject</label>
+            <input type="text" name="subject" id="subject"
+             placeholder="Subject *" class="input-field"
+             formControlName="subject">
+             <div *ngIf="f.subject.touched && f.subject.invalid">
+              <div *ngIf="f.subject.errors?.['required']" class="error-message">Subject is mandetory.
+              </div>
+          </div>
+
+            <label for="message" class="label">Your message </label>
+            <textarea name="message" id="message" placeholder="Your message *" 
+            required class="input-field"
+            formControlName="message"></textarea>
+
+            <div *ngIf="f.message.touched && f.message.invalid">
+              <div *ngIf="f.message.errors?.['required']" class="error-message">message is mandetory.</div>
+          </div>
+            <div>
+            <button  type="submit" class="btn btn-tertiary" 
+            [disabled]="!formDetails.valid">Submit</button>  
+
+            <h4 [innerHTML]="res" class="result"></h4>
+            </div>
+          </form>
+
+          <div class="contact-content">
+
+            <ul class="contact-list">
+
+              <li class="contact-item">
+
+                <div class="item-icon" style="background-color: hsl(177, 39%, 72%)">
+                  <ion-icon name="call" aria-hidden="true"></ion-icon>
+                </div>
+
+                <div>
+                  <p class="label-lg">Phone</p>
+
+                  <a href="tel:+011236548096" class="body-lg">+91 99702XXXXX</a>
+                </div>
+
+              </li>
+
+              <li class="contact-item">
+
+                <div class="item-icon" style="background-color: hsl(41, 99%, 64%)">
+                  <ion-icon name="mail" aria-hidden="true"></ion-icon>
+                </div>
+
+                <div>
+                  <p class="label-lg">Mail</p>
+
+                  <a href="tel:info@domainname.com" class="body-lg">akshaykhirolkar@gmail.com</a>
+                </div>
+
+              </li>
+
+              <li class="contact-item">
+
+                <div class="item-icon" style="background-color: hsl(19, 97%, 85%)">
+                  <ion-icon name="location" aria-hidden="true"></ion-icon>
+                </div>
+
+                <div>
+                  <p class="label-lg">Visit My Office</p>
+
+                  <address class="body-lg">
+                    Pune Maharashtra,
+                    India
+                  </address>
+                </div>
+
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+      </section>
+
+    </article>
+  </main>

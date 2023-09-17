@@ -1,0 +1,58 @@
+<!-- 
+    - #HEADER
+    To keep the header fixed at the top of the page (i.e., not moving when you scroll),
+     you can use CSS to set the header's 
+    position property to fixed. Here's how you can modify your header component's HTML and CSS to achieve this:
+  -->
+
+  <header class="header" data-header>         
+    <div class="container">   
+      <a (click)="scrollToSection('home')" routerLink="" class="logo">
+        <img src="assets/images/logo1.svg" width="151" height="28" alt="Jassa home">   
+      </a>
+       
+      <nav class="navbar" data-navbar [ngClass]="status ? 'active' : ''">
+        <ul class="navbar-list">    
+
+          <li class="navbar-item">
+            <a (click)="scrollToSection('home')" routerLink="home" class="label-lg navbar-link has-after" routerLinkActive="active">Home</a>
+          </li>
+<!-- 
+          <li class="navbar-item">
+            <a (click)="scrollToSection('experience')" class="label-lg navbar-link has-after" routerLinkActive="active">Experience</a>
+          </li> -->
+
+          
+          <li class="navbar-item">
+            <a routerLink="Experience" (click)="scrollToSection('experience')" class="label-lg navbar-link has-after" routerLinkActive="active">Experience</a>
+          </li>
+
+          <li class="navbar-item">
+            <a routerLink="Skills"  (click)="scrollToSection('skills')" class="label-lg navbar-link has-after" routerLinkActive="active">Skills</a>
+          </li>
+
+          <li class="navbar-item">
+            <!-- <a routerLink="/portfolio"  class="label-lg navbar-link has-after" routerLinkActive="active">Extracurriculars</a> -->
+            <a routerLink="Extracurricular"  (click)="scrollToSection('Extracurricular')" class="label-lg navbar-link has-after" routerLinkActive="active">Extracurricular</a>  
+          </li>
+
+          <li class="navbar-item">
+            <a routerLink="TESTIMONIAL"  class="label-lg navbar-link has-after" routerLinkActive="active">TESTIMONIAL</a>
+          </li>
+          
+        </ul>
+      </nav>
+
+      <a routerLink="contact" (click)="scrollToSection('contact')" class="btn btn-primary">Contact Now</a>
+
+      <button class="nav-toggle-btn" aria-label="menu" data-nav-toggler (click)="addToggle()">
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+
+      <!-- <button class="nav-toggle-btn" aria-label="menu" data-nav-toggler (click)="addToggle()">
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button> -->
+
+    </div>
+    <!-- <router-outlet></router-outlet>  -->
+  </header>

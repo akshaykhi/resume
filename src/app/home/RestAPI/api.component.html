@@ -1,0 +1,29 @@
+<h4 id="api">
+    Here I am fetching data from an external website (API) called 'https://jsonplaceholder.typicode.com/posts'.
+    <br> I am filtering this data and printing rows where the title of the post contains the word "dolorem."
+    <br> Also, I am printing only the first 10 rows that meet this condition.
+    <br>
+So, I am displaying the  posts that have "dolorem" in their title, and we'll limit the display to the first 10 of those posts
+ </h4>
+
+<!-- api.component.html -->
+
+<h1>Records</h1>
+<table border="1">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>User ID</th>
+      <th>Title</th>
+      <th>Body</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let post of response | slice:0:10">
+      <td>{{ post.id }}</td>
+      <td>{{ post.userId }}</td>
+      <td>{{ post.title }}</td>
+      <td>{{ post.body }}</td>
+    </tr>
+  </tbody>
+</table>
